@@ -1,5 +1,5 @@
 {
-  "Vundle.vim": { "branch": "master", "commit": "5548a1a937d4e72606520c7484cd384e6c76b565" },
+  "blink.cmp": { "branch": "main", "commit": "dcda20d3aa345025699a920c45b0a0603551f41d" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "nvim-treesitter": { "branch": "master", "commit": "da88ea477c67c7f7ebab6d1e662d0cdebfcb57f0" }
 }

@@ -30,10 +30,9 @@ vim.g.maplocalleader = "\\"
 
 
 -- Setup lazy.nvim
-local opts = {
--- rocks = { enabled = false },
-}
+
 require("lazy").setup({
     require("config.treesitter"),
-}, opts)
+    require("config.blink"),
+})
 
