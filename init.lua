@@ -4,6 +4,29 @@
 -- vim.cmd("source ~/.config/nvim/vimrc.vim")
 
 
+
+-- some options
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.guicursor = ""
+vim.opt.tabstop = 4      -- Number of spaces for a tab
+vim.opt.shiftwidth = 4   -- Number of spaces for auto-indent
+vim.opt.expandtab = true -- Convert tabs to spaces
+
+
+-- Error Mesages and wornigs
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = "\t\t●",
+        spacing = 4,
+    },
+    signs = true,
+    update_in_insert = false,
+})
+
+
+
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -34,5 +57,6 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     require("config.treesitter"),
     require("config.blink"),
+    require("config.lsp_config"),
 })
 
