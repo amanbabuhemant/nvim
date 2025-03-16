@@ -3,7 +3,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.local/share/nvim/site/pack/vundle/start/Vundle.vim
-call vundle#begin()
+"call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
