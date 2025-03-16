@@ -58,5 +58,22 @@ require("lazy").setup({
     require("config.treesitter"),
     require("config.blink"),
     require("config.lsp_config"),
+    { "tmhedberg/SimpylFold" }, -- better codefolding
+    { "jnurmine/Zenburn" }, -- colorscheme
+    { "altercation/vim-colors-solarized" }, -- colorscheme
+    { "danilo-augusto/vim-afterglow" }, -- colorscheme
+    { "tribela/vim-transparent" }, -- Transparent
+    { "scrooloose/nerdtree" }, -- filetree
+    { "kien/ctrlp.vim" }, -- Searching through vim
+    { "tpope/vim-fugitive" }, -- git intigration
+    { "Lokaltog/powerline" }, -- git powrline
+    { "mattn/emmet-vim" }, -- HTML emmiting
+    { "Yggdroot/indentLine" }, -- Intent line hint
+    { "wfxr/minimap.vim" }, -- code minimap
+    { "junegunn/fzf" }, -- fuzzy finder
+    { "preservim/tagbar" }, -- Class outline viewer
+    { "vim-airline/vim-airline" }, -- Vim Airline
+    { "tpope/vim-commentary" }, -- Commenting Shortcut
+    { "wakatime/vim-wakatime" }, -- wakatime tracking
 })
 
