@@ -1,17 +1,7 @@
 --[[ init.lua ]]--
 
--- Old Vimrc
--- vim.cmd("source ~/.config/nvim/vimrc.vim")
 
-
-
--- some options
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.guicursor = ""
-vim.opt.tabstop = 4      -- Number of spaces for a tab
-vim.opt.shiftwidth = 4   -- Number of spaces for auto-indent
-vim.opt.expandtab = true -- Convert tabs to spaces
+vim.cmd.colorscheme("zaibatsu")
 
 
 -- Error Mesages and wornigs
@@ -44,36 +34,36 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+ -- options and mappings
+require("options")
+require("mappings")
 
-
-
--- Setup lazy.nvim
+-- Prugins
 
 require("lazy").setup({
     require("config.treesitter"),
     require("config.blink"),
     require("config.lsp_config"),
+    require("config.nerdtree"), -- file tree
+    require("config.indent_line"), -- Indent line hint
+    require("config.fzf"), -- fuzzy finder
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "jnurmine/Zenburn" }, -- colorscheme
     { "altercation/vim-colors-solarized" }, -- colorscheme
     { "danilo-augusto/vim-afterglow" }, -- colorscheme
     { "tribela/vim-transparent" }, -- Transparent
-    { "scrooloose/nerdtree" }, -- filetree
     { "kien/ctrlp.vim" }, -- Searching through vim
     { "tpope/vim-fugitive" }, -- git intigration
     { "Lokaltog/powerline" }, -- git powrline
     { "mattn/emmet-vim" }, -- HTML emmiting
-    { "Yggdroot/indentLine" }, -- Intent line hint
+    { "ap/vim-css-color" }, -- CSS colol preview
     { "wfxr/minimap.vim" }, -- code minimap
-    { "junegunn/fzf" }, -- fuzzy finder
     { "preservim/tagbar" }, -- Class outline viewer
     { "vim-airline/vim-airline" }, -- Vim Airline
     { "tpope/vim-commentary" }, -- Commenting Shortcut
-    { "wakatime/vim-wakatime" }, -- wakatime tracking
+    {
+        "wakatime/vim-wakatime", -- wakatime tracking
+        lazy = false
+    },
 })
 

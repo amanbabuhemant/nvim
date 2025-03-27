@@ -5,8 +5,10 @@ return {
         opts = {
             servers = {
 
+                -- Fortran
                 fortls = {},
 
+                -- Go
                 gopls = {
                     settings = {
                         gopls = {
@@ -19,6 +21,7 @@ return {
                     }
                 },
 
+                -- Lua
                 lua_ls = {
                     settings = {
                         Lua = {
@@ -29,7 +32,7 @@ return {
                                 globals = { "vim" }, -- Recognize `vim` as a global
                             },
                             workspace = {
-                                checkThirdParty = false, -- Disable third-party plugin checks
+                                -- checkThirdParty = true, -- Ensable third-party plugin checks
                                 library = vim.api.nvim_get_runtime_file("", true), -- Recognize Neovim runtime
                             },
                             telemetry = {
@@ -39,6 +42,7 @@ return {
                     }
                 },
 
+                -- Python
                 pyright = {
                     settings = {
                         python = {
