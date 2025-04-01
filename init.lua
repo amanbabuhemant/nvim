@@ -47,6 +47,7 @@ require("lazy").setup({
     require("config.nerdtree"), -- file tree
     require("config.indent_line"), -- Indent line hint
     require("config.fzf"), -- fuzzy finder
+    require("config.leetcode"), -- leetcode
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "jnurmine/Zenburn" }, -- colorscheme
     { "altercation/vim-colors-solarized" }, -- colorscheme
