@@ -41,13 +41,13 @@ require("mappings")
 -- Prugins
 
 require("lazy").setup({
-    require("config.treesitter"),
-    require("config.blink"),
-    require("config.lsp_config"),
-    require("config.nerdtree"), -- file tree
-    require("config.indent_line"), -- Indent line hint
-    require("config.fzf"), -- fuzzy finder
-    require("config.leetcode"), -- leetcode
+    require("plugins.treesitter"),
+    require("plugins.blink"),
+    require("plugins.lsp_config"),
+    require("plugins.nerdtree"), -- file tree
+    require("plugins.indent_line"), -- Indent line hint
+    require("plugins.fzf"), -- fuzzy finder
+    require("plugins.leetcode"), -- leetcode
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "jnurmine/Zenburn" }, -- colorscheme
     { "altercation/vim-colors-solarized" }, -- colorscheme
