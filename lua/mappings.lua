@@ -31,3 +31,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", ntst)
 vim.keymap.set("n", "<C-b>", "<C-b>zz", ntst)
 vim.keymap.set("n", "<C-f>", "<C-f>zz", ntst)
 
+-- Esc for terminal
+vim.keymap.set("t",  "<Esc>", "<C-\\><C-n>", ntst)
+

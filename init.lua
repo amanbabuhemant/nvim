@@ -38,7 +38,10 @@ vim.opt.rtp:prepend(lazypath)
 require("options")
 require("mappings")
 
--- Prugins
+-- helpers
+require("helpers")
+
+-- Plugins
 
 require("lazy").setup({
     require("plugins.treesitter"),
