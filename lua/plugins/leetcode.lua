@@ -8,8 +8,7 @@ return {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
         },
-        keys = {
-            {"<C-'>", ":Leet run<CR>"} -- Unfortunatly we can't make this
+        opts = {
         },
     }
 }
