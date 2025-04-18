@@ -8,15 +8,8 @@ return {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
         },
-        mappings = function()
-            -- local map = vim.api.nvim_set_keymap
-            -- map("n", "<C-'", ":Leet run", { silent=true })
-            vim.keymap.set("n", "<C-'>", ":Leet run<CR>", { noremap=true, silent=false })
-        end,
-        opts = {
+        keys = {
+            {"<C-'>", ":Leet run<CR>"} -- Unfortunatly we can't make this
         },
-        -- mappings = {
-        --     vim.keymap.set("n", "<C-'>", ":Leet run<CR>", { noremap=true, silent=true })
-        -- },
     }
 }
