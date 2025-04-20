@@ -1,4 +1,26 @@
 -- [[ helpers funcitons and functnalitis ]] --
 
-require("helpers.run-code")
-require("helpers.logger")
+local luarocks = require("luarocks")
+
+local helpers = {
+    { "run-code" },
+    { "logger" },
+};
+
+for _, helper in pairs(helpers) do
+    if helper.luarocks then
+        for _, lr in pairs(helper.luarocks) do
+            if not luarocks.is_installed(lr) then
+                print("luarock '" .. lr .. "' not installed, required by " .. helper[1])
+                print("installing " .. lr)
+                luarocks.install(lr)
+                local installed = luarocks.is_installed(luarocks)
+                if not installed then
+                    print("root privlages might needed")
+                    vim.cmd("terminal sudo luarocks install " .. lr)
+                    vim.cmd("startinsert")
+                end
+            end
+        end
+    end
+end
