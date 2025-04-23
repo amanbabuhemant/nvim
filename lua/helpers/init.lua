@@ -6,6 +6,7 @@ local helpers = {
     { "run-code" },
     { "logger" },
     { "yankbin", luarocks = { "luafilesystem" }},
+    { "notes", luarocks = { "luafilesystem" }},
 };
 
 for _, helper in pairs(helpers) do
