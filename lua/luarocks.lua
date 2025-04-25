@@ -2,7 +2,14 @@
 
 local M = {}
 
+M.list_cache = nil
+M.use_cache = true
+
 function M.list()
+    if M.use_cache and M.list_cache then
+        return M.list_cache
+    end
+
     local out = io.popen("luarocks list"):read("*a")
     local installed_rocks = {};
     local header_passed = false;
@@ -14,7 +21,15 @@ function M.list()
             header_passed = true
         end
     end
+
+    M.list_cache = installed_rocks
     return installed_rocks
+end
+
+function M.update_cache()
+    M.use_cache = false
+    M.list()
+    M.use_cache = true
 end
 
 function M.is_installed(luarock)
@@ -32,6 +47,7 @@ function M.install(luarock)
     if e then
         os.execute("sudo " .. install_command)
     end
+    M.update_cache()
 end
 
 function M.remove(luarock)
@@ -40,6 +56,7 @@ function M.remove(luarock)
     if e then
         os.execute("sudo " .. remove_command)
     end
+    M.update_cache()
 end
 
 return M
