@@ -11,7 +11,7 @@ function M.log()
     local var = vim.fn.getreg("0")
 
     local filetype = vim.bo.filetype
-    local ll;
+    local ll = "";
     if filetype == "text" then
         ll = var
     elseif filetype == "python" then
@@ -36,6 +36,7 @@ function M.log()
     vim.fn.setreg("0", ll, "c")
     vim.cmd(":normal! o")
     vim.cmd(":normal! p")
+    vim.cmd(":normal! ==")
 
     vim.api.nvim_win_set_cursor(0, {cr, cc})
 end

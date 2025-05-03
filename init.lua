@@ -1,7 +1,8 @@
 --[[ init.lua ]]--
 
 
-vim.cmd.colorscheme("zaibatsu")
+
+local scheme_switcher = require("scheme-switcher")
 
 
 -- Error Mesages and wornigs
@@ -40,6 +41,7 @@ require("mappings")
 
 -- Plugins
 require("lazy").setup({
+    require("colorschemes"),
     require("plugins.treesitter"),
     require("plugins.blink"),
     require("plugins.lsp_config"),
@@ -49,9 +51,6 @@ require("lazy").setup({
     require("plugins.leetcode"), -- leetcode
     require("plugins.telescope"), -- telescope
     { "tmhedberg/SimpylFold" }, -- better codefolding
-    { "jnurmine/Zenburn" }, -- colorscheme
-    { "altercation/vim-colors-solarized" }, -- colorscheme
-    { "danilo-augusto/vim-afterglow" }, -- colorscheme
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim
     { "tpope/vim-fugitive" }, -- git intigration
@@ -71,3 +70,5 @@ require("lazy").setup({
 -- helpers
 vim.schedule(function()require("helpers")end)
 
+-- colorscheme
+scheme_switcher.set_colorscheme(scheme_switcher.get_current_colorscheme())
