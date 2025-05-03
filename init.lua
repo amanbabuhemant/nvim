@@ -50,6 +50,7 @@ require("lazy").setup({
     require("plugins.fzf"), -- fuzzy finder
     require("plugins.leetcode"), -- leetcode
     require("plugins.telescope"), -- telescope
+    require("plugins.nui"), -- nui
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim
