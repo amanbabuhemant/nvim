@@ -51,6 +51,7 @@ require("lazy").setup({
     require("plugins.leetcode"), -- leetcode
     require("plugins.telescope"), -- telescope
     require("plugins.nui"), -- nui
+    require("plugins.aneo"), -- aneo
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim

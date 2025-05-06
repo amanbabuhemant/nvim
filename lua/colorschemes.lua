@@ -11,5 +11,6 @@ return {
         { "morhetz/gruvbox" },
         { "rebelot/kanagawa.nvim" },
         { "folke/tokyonight.nvim" },
+        { "webhooked/kanso.nvim" },
     }
 }
