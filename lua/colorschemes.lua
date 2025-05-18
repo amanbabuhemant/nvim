@@ -12,5 +12,7 @@ return {
         { "rebelot/kanagawa.nvim" },
         { "folke/tokyonight.nvim" },
         { "webhooked/kanso.nvim" },
+        { "bettervim/yugen.nvim" },
+        { "navarasu/onedark.nvim" },
     }
 }
