@@ -5,8 +5,8 @@ local luarocks = require("luarocks")
 local helpers = {
     { "run-code" },
     { "logger" },
-    { "yankbin", luarocks = { "luafilesystem" }},
-    { "notes", luarocks = { "luafilesystem" }},
+    { "yankbin" },
+    { "notes" },
 };
 
 for _, helper in pairs(helpers) do

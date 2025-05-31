@@ -1,7 +1,5 @@
 -- [ Yank Bin ] --
 
-local lfs = require("lfs")
-
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local previewers = require("telescope.previewers")
@@ -14,12 +12,9 @@ local M = {};
 local yank_selected = false
 local lines_to_paste = ""
 
-local yanks_dir = os.getenv("HOME") .. "/.local/share/nvim/yankbin/"
+local yanks_dir = vim.fn.stdpath("data") .. "/yankbin"
 
-local attr = lfs.attributes(yanks_dir)
-if not (attr and attr.mode == "directory") then
-    lfs.mkdir(yanks_dir)
-end
+vim.fn.mkdir(yanks_dir, "p")
 
 function M.save()
     local buf, s_line , _ = unpack(vim.fn.getpos("v"))

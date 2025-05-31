@@ -1,13 +1,8 @@
 -- [[ notes ]] --
 
 
-local lfs = require("lfs")
-local notes_dir = os.getenv("HOME") .. "/.local/share/nvim/notes/"
-
-local attr = lfs.attributes(notes_dir)
-if not (attr and attr.mode == "directory") then
-    lfs.mkdir(notes_dir)
-end
+local notes_dir = vim.fn.stdpath("data") .. "/notes/"
+vim.fn.mkdir(notes_dir, "p")
 
 
 local Notes = {};
@@ -71,7 +66,7 @@ end
 function Notes.cmd(opts)
     local args = opts.args
     local file_path = vim.fn.expand("%:p")
-    local pwd = lfs.currentdir()
+    local pwd = os.getenv("PWD")
 
     if args == "" then
         if file_path ~= "" then
