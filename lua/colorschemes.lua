@@ -7,7 +7,7 @@ return {
         { "altercation/vim-colors-solarized" },
         { "danilo-augusto/vim-afterglow" },
         { "rose-pine/neovim" },
-        { "catppuccin/nvim" },
+        { "catppuccin/nvim", name = "catppuccin" },
         { "morhetz/gruvbox" },
         { "rebelot/kanagawa.nvim" },
         { "folke/tokyonight.nvim" },

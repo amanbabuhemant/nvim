@@ -56,7 +56,6 @@ require("lazy").setup({
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim
     { "tpope/vim-fugitive" }, -- git intigration
-    { "Lokaltog/powerline" }, -- git powrline
     { "mattn/emmet-vim" }, -- HTML emmiting
     { "ap/vim-css-color" }, -- CSS colol preview
     { "wfxr/minimap.vim" }, -- code minimap
