@@ -7,6 +7,7 @@ local helpers = {
     { "logger" },
     { "yankbin" },
     { "notes" },
+    { "rewrite" },
 };
 
 for _, helper in pairs(helpers) do
