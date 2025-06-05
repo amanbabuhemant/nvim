@@ -15,5 +15,7 @@ return {
         { "bettervim/yugen.nvim" },
         { "navarasu/onedark.nvim" },
         { "bluz71/vim-moonfly-colors", name = "moonfly" },
+        { "ribru17/bamboo.nvim" },
+        { "edeneast/nightfox.nvim" },
     }
 }
