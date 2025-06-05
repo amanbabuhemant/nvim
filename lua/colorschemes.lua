@@ -14,5 +14,6 @@ return {
         { "webhooked/kanso.nvim" },
         { "bettervim/yugen.nvim" },
         { "navarasu/onedark.nvim" },
+        { "bluz71/vim-moonfly-colors", name = "moonfly" },
     }
 }
