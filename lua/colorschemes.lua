@@ -17,5 +17,6 @@ return {
         { "bluz71/vim-moonfly-colors", name = "moonfly" },
         { "ribru17/bamboo.nvim" },
         { "edeneast/nightfox.nvim" },
+        { "zenbones-theme/zenbones.nvim", dependencies = "rktjmp/lush.nvim"},
     }
 }
