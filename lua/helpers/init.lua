@@ -8,6 +8,7 @@ local helpers = {
     { "yankbin" },
     { "notes" },
     { "rewrite" },
+    { "toggle-bool" },
 };
 
 for _, helper in pairs(helpers) do
