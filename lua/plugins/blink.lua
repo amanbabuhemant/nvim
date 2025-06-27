@@ -31,10 +31,14 @@ return {
                 },
             },
 
-
             completion = {
                 -- prevent selecting first complition item
                 list = { selection = { preselect = false } },
+                documentation = {
+                    auto_show = true,
+                    auto_show_delay_ms = 1000,
+                    window = { border = "double" },
+                },
             },
             -- Default list of enabled providers defined so that you can extend it
             -- elsewhere in your config, without redefining it, due to `opts_extend`
@@ -42,7 +46,9 @@ return {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
             },
 
-            fuzzy = { implementation = "prefer_rust_with_warning" }
+            fuzzy = { implementation = "prefer_rust_with_warning" },
+
+            -- TODO: signature config with toggle
         },
         opts_extend = { "sources.default" },
     }

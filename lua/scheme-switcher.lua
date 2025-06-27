@@ -1,6 +1,6 @@
 --[[ color scheme switcher ]]--
 
-local set_colorscheme_file_path = os.getenv("HOME") .. "/.local/share/nvim/.set_colorscheme"
+local set_colorscheme_file_path = vim.fn.stdpath("data") .. "/.set_colorscheme"
 
 local M = {};
 
@@ -41,7 +41,7 @@ function M.colorscheme_menu()
     end
 
     local metalines = {
-        "Available colorschemes",
+        "Available colorschemes: " .. tostring(table.getn(schemes)),
         "Press enter to set",
         "current colorscheme:",
         current_scheme,
@@ -65,6 +65,7 @@ function M.colorscheme_menu()
     vim.wo[win].number = false
     vim.wo[win].relativenumber = false
     vim.wo[win].cursorline = true
+    vim.wo[win].scrolloff=3
 
     local function on_enter()
         local scheme_index, _ = unpack(vim.api.nvim_win_get_cursor(win))

@@ -30,8 +30,6 @@ function Notes.open(notefile)
 
     vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.fn.readfile(note_file))
 
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i", true, false, true), "n", true)
-
     -- mappings
     local sae = function() Notes.save_and_exit(buf, note_file) end
     vim.keymap.set("i", "<Esc><Esc>", sae, { buffer = buf })
