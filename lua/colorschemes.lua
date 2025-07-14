@@ -18,5 +18,7 @@ return {
         { "ribru17/bamboo.nvim" },
         { "edeneast/nightfox.nvim" },
         { "zenbones-theme/zenbones.nvim", dependencies = "rktjmp/lush.nvim"},
+        { "biisal/blackhole" },
+        { "stevedylandev/darkmatter-nvim" },
     }
 }
