@@ -5,6 +5,9 @@ return {
         opts = {
             servers = {
 
+                -- C
+                clangd = {},
+
                 -- Fortran
                 fortls = {},
 
@@ -29,11 +32,14 @@ return {
                                 version = "LuaJIT", -- Neovim uses LuaJIT
                             },
                             diagnostics = {
-                                globals = { "vim" }, -- Recognize `vim` as a global
+                                globals = { "vim", "love" }, -- Recognize `vim` and `love` as a global
                             },
                             workspace = {
+                                library = {
+                                    vim.env.VIMRUNTIME, -- Neovim runtime
+                                    "${3rd}/love2d/library", -- LOVE2D hinting
+                                },
                                 -- checkThirdParty = true, -- Ensable third-party plugin checks
-                                library = vim.api.nvim_get_runtime_file("", true), -- Recognize Neovim runtime
                             },
                             telemetry = {
                                 enable = false, -- Disable telemetry

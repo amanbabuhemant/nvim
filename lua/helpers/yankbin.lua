@@ -12,7 +12,7 @@ local M = {};
 local yank_selected = false
 local lines_to_paste = ""
 
-local yanks_dir = vim.fn.stdpath("data") .. "/yankbin"
+local yanks_dir = vim.fn.stdpath("data") .. "/yankbin/"
 
 vim.fn.mkdir(yanks_dir, "p")
 
