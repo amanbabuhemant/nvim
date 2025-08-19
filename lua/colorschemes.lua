@@ -6,7 +6,7 @@ return {
         { "jnurmine/Zenburn" },
         { "altercation/vim-colors-solarized" },
         { "danilo-augusto/vim-afterglow" },
-        { "rose-pine/neovim" },
+        { "rose-pine/neovim", name = "roes-pine" },
         { "catppuccin/nvim", name = "catppuccin" },
         { "morhetz/gruvbox" },
         { "rebelot/kanagawa.nvim" },
@@ -20,5 +20,8 @@ return {
         { "zenbones-theme/zenbones.nvim", dependencies = "rktjmp/lush.nvim"},
         { "biisal/blackhole" },
         { "stevedylandev/darkmatter-nvim" },
+        { "tanvirtin/monokai.nvim" },
+        { "cooperuser/glowbeam.nvim" },
+        { "mitch1000/backpack.nvim" },
     }
 }
