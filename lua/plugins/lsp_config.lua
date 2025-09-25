@@ -62,7 +62,7 @@ return {
             }
         },
         config = function(_, opts)
-            local lspconfig = require('lspconfig')
+            -- local lspconfig = require('lspconfig') -- this is deprecated now
             local blink_cmp = require('blink.cmp')
 
             -- Ensure blink.cmp is properly initialized
@@ -71,7 +71,9 @@ return {
             -- Loop through servers and configure them
             for server, config in pairs(opts.servers) do
                 config.capabilities = blink_cmp.get_lsp_capabilities(config.capabilities)
-                lspconfig[server].setup(config)
+                -- lspconfig[server].setup(config) -- this is deprecated now
+                vim.lsp.config(server, config)
+                vim.lsp.enable(server, true)
             end
 
             -- Rename auto command
