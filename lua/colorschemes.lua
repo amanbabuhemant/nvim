@@ -23,5 +23,7 @@ return {
         { "tanvirtin/monokai.nvim" },
         { "cooperuser/glowbeam.nvim" },
         { "mitch1000/backpack.nvim" },
+        { "p00f/alabaster.nvim" },
+        { "darianmorat/gruvdark.nvim" },
     }
 }
