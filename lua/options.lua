@@ -25,3 +25,4 @@ vim.opt.viminfo = "'128,<1024" -- longer copy paste
 
 -- Line Wrap
 vim.opt.wrap = false
+

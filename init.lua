@@ -36,8 +36,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
  -- options and mappings
-require("options")
 require("mappings")
+require("options")
 
 -- Plugins
 require("lazy").setup({
@@ -46,7 +46,7 @@ require("lazy").setup({
     require("plugins.blink"),
     require("plugins.lsp_config"),
     require("plugins.nerdtree"), -- file tree
-    require("plugins.indent_line"), -- Indent line hint
+    require("plugins.indentmini"), -- Indent line hint
     require("plugins.fzf"), -- fuzzy finder
     require("plugins.leetcode"), -- leetcode
     require("plugins.telescope"), -- telescope
@@ -73,3 +73,7 @@ vim.schedule(function()require("helpers")end)
 
 -- colorscheme
 scheme_switcher.set_colorscheme(scheme_switcher.get_current_colorscheme())
+
+-- highlights
+vim.cmd("highlight IndentLine guifg=#555555")
+vim.cmd("highlight IndentLineCurrent guifg=#555555")
