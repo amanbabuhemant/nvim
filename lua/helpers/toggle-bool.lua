@@ -13,11 +13,8 @@ end
 
 function M.toggle_bool()
     vim.cmd(":normal! yiw")
-    print("copiing the value")
     local bool_value = vim.fn.getreg("")
-    print("bool_value:", bool_value)
     local toggled_value = M.toggle_bool_value(bool_value)
-    print("toggled_value:", toggled_value)
     vim.fn.setreg("", toggled_value)
     vim.cmd(":normal! viw")
     vim.cmd(":normal! p")

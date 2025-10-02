@@ -9,6 +9,7 @@ local helpers = {
     { "notes" },
     { "rewrite" },
     { "toggle-bool" },
+    { "shifter" },
 };
 
 for _, helper in pairs(helpers) do
