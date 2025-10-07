@@ -25,5 +25,17 @@ return {
         { "mitch1000/backpack.nvim" },
         { "p00f/alabaster.nvim" },
         { "darianmorat/gruvdark.nvim" },
+        { "wurli/cobalt.nvim" },
+        { "makestatic/oblique.nvim" },
+        { "WTFox/jellybeans.nvim" },
+        { "neanias/everforest-nvim" },
+        { "jpwol/thorn.nvim" },
+        { "bartekjaszczak/finale-nvim" },
+        { "kamwitsta/vinyl.nvim" },
+        { "drazil100/dusklight.vim" },
+        { "darkvoid-theme/darkvoid.nvim" },
+        { "fnune/standard" },
+        { "water-sucks/darkrose.nvim" },
+        { "uloco/bluloco.nvim" },
     }
 }
