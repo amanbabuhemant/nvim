@@ -37,5 +37,14 @@ return {
         { "fnune/standard" },
         { "water-sucks/darkrose.nvim" },
         { "uloco/bluloco.nvim" },
+        { "craftzdog/solarized-osaka.nvim" },
+        { "olivercederborg/poimandres.nvim" },
+        { "ficd0/ashen.nvim" },
+        { "leana8959/curry.nvim" },
+        { "vague-theme/vague.nvim" },
+        { "brennovich/marques-de-itu" },
+        { "S-Spektrum-M/blackbird.nvim" },
+        { "miikanissi/modus-themes.nvim" },
+        { "santhosh-tekuri/silence.nvim" },
     }
 }
