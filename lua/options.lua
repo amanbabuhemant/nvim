@@ -15,7 +15,7 @@ vim.opt.expandtab = true -- Convert tabs to spaces
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
--- Floding
+-- Folding
 vim.opt.foldenable = false
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99

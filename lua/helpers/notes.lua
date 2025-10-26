@@ -8,7 +8,7 @@ vim.fn.mkdir(notes_dir, "p")
 local Notes = {};
 
 function Notes.open(notefile)
-    local note_file = notes_dir .. vim.fn.sha256(notefile) .. ".txt"
+    local note_file = notes_dir .. vim.fn.sha256(notefile) .. ".md"
     local w_width = math.max(math.floor(vim.api.nvim_win_get_width(0) / 3), 30)
     local buf = vim.api.nvim_create_buf(false, true)
     local win = vim.api.nvim_open_win(buf, true, {
@@ -29,6 +29,7 @@ function Notes.open(notefile)
     f:close()
 
     vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.fn.readfile(note_file))
+    vim.bo[buf].filetype = "markdown"
 
     -- mappings
     local sae = function() Notes.save_and_exit(buf, note_file) end
