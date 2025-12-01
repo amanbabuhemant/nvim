@@ -24,6 +24,8 @@ function M.log()
         ll = "print(\"" .. var .. ":\", " .. var .. ")"
     elseif filetype == "dart" then
         ll = "print(\"" .. var .. ":\", " .. var .. ");"
+    elseif filetype == "c" then
+        ll = "printf(\"" .. var .. ": %d\\n\", " .. var .. ");"
     end
 
     for c in line:gmatch(".") do
