@@ -46,5 +46,9 @@ return {
         { "S-Spektrum-M/blackbird.nvim" },
         { "miikanissi/modus-themes.nvim" },
         { "santhosh-tekuri/silence.nvim" },
+        { "KijitoraFinch/nanode.nvim" },
+        { "vertexE/synth.nvim" },
+        { "abhilash26/mapledark.nvim" },
+        { "rakr/vim-two-firewatch" },
     }
 }
