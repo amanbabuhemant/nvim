@@ -42,6 +42,7 @@ require("options")
 -- Plugins
 require("lazy").setup({
     require("colorschemes"),
+    require("ignore-plugins"),
     require("plugins.treesitter"),
     require("plugins.blink"),
     require("plugins.lsp_config"),
