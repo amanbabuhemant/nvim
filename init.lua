@@ -54,6 +54,7 @@ require("lazy").setup({
     require("plugins.nui"), -- nui
     require("plugins.aneo"), -- aneo
     require("plugins.treesj"), -- treesj
+    require("plugins.easy_align"), -- easy align
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim
