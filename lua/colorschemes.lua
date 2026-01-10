@@ -50,5 +50,6 @@ return {
         { "vertexE/synth.nvim" },
         { "abhilash26/mapledark.nvim" },
         { "rakr/vim-two-firewatch" },
+        { "oskarnurm/koda.nvim" },
     }
 }
