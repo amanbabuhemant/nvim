@@ -55,6 +55,7 @@ require("lazy").setup({
     require("plugins.aneo"), -- aneo
     require("plugins.treesj"), -- treesj
     require("plugins.easy_align"), -- easy align
+    require("plugins.lualine"), -- lualine
     { "tmhedberg/SimpylFold" }, -- better codefolding
     { "tribela/vim-transparent" }, -- Transparent
     { "kien/ctrlp.vim" }, -- Searching through vim
@@ -63,7 +64,6 @@ require("lazy").setup({
     { "ap/vim-css-color" }, -- CSS colol preview
     { "wfxr/minimap.vim" }, -- code minimap
     { "preservim/tagbar" }, -- Class outline viewer
-    { "vim-airline/vim-airline" }, -- Vim Airline
     { "tpope/vim-commentary" }, -- Commenting Shortcut
     {
         "wakatime/vim-wakatime", -- wakatime tracking
