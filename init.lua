@@ -62,7 +62,6 @@ require("lazy").setup({
     { "tpope/vim-fugitive" }, -- git intigration
     { "mattn/emmet-vim" }, -- HTML emmiting
     { "ap/vim-css-color" }, -- CSS colol preview
-    { "wfxr/minimap.vim" }, -- code minimap
     { "preservim/tagbar" }, -- Class outline viewer
     { "tpope/vim-commentary" }, -- Commenting Shortcut
     {
