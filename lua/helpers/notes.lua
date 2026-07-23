@@ -4,6 +4,8 @@
 local notes_dir = vim.fn.stdpath("data") .. "/notes/"
 vim.fn.mkdir(notes_dir, "p")
 
+local is_fullscreen = false;
+local fullscreen_width = vim.api.nvim_win_get_width(0)
 
 local Notes = {};
 
@@ -24,6 +26,10 @@ function Notes.open(notefile)
     local f = io.open(note_file, "r")
     if not f then
         f = io.open(note_file, "w")
+        if not f then
+            print("Unable to open note file")
+            return
+        end
         f:write("")
     end
     f:close()
@@ -33,9 +39,11 @@ function Notes.open(notefile)
 
     -- mappings
     local sae = function() Notes.save_and_exit(buf, note_file) end
+    local fft = function() Notes.full_screen_toggle(win) end
     vim.keymap.set("i", "<Esc><Esc>", sae, { buffer = buf })
-    vim.keymap.set("n", "<Esc>", sae, { buffer = buf })
+    vim.keymap.set("n", "<Esc><Esc>", sae, { buffer = buf })
     vim.keymap.set("n", "q", sae, { buffer = buf })
+    vim.keymap.set("n", "gf", fft, { buffer = buf })
 end
 
 function Notes.save_and_exit(buf, note_file)
@@ -48,6 +56,10 @@ function Notes.save_and_exit(buf, note_file)
 
     -- writing the content
     local nf = io.open(note_file, "w")
+    if not nf then
+        print("Unable to open note file")
+        return
+    end
     nf:write(content)
     nf:close()
 
@@ -60,6 +72,16 @@ function Notes.save_and_exit(buf, note_file)
         ),
         "n", false
     )
+end
+
+function Notes.full_screen_toggle(win)
+    if is_fullscreen then
+        vim.api.nvim_win_set_width(win, math.max(math.floor(fullscreen_width / 3), 30))
+        is_fullscreen = false
+    else
+        vim.api.nvim_win_set_width(win, fullscreen_width)
+        is_fullscreen = true
+    end
 end
 
 function Notes.cmd(opts)
@@ -81,6 +103,31 @@ function Notes.cmd(opts)
         Notes.open(file_path)
     elseif args == "-d" then
         Notes.open(pwd)
+    elseif args == "-p" then
+        local project_root_dir
+        if vim.fn.isdirectory(pwd .. "/.git") == 1 then
+            project_root_dir = pwd
+            return Notes.open(project_root_dir)
+        end
+        local start = vim.api.nvim_buf_get_name(0)
+        if string.len(start) == 0 and pwd then
+            start = pwd
+        end
+        if string.len(start) == 0 then
+            print("unable to get current directory")
+            return
+        end
+        for dir in vim.fs.parents(start) do
+            if vim.fn.isdirectory(dir .. '/.git') == 1 then
+                project_root_dir = dir
+                break
+            end
+        end
+        if not project_root_dir then
+            print("no project directory found")
+            return
+        end
+        Notes.open(project_root_dir)
     else
         Notes.open(args)
     end
