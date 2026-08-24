@@ -4,8 +4,7 @@ M = {}
 
 function M.shift_up()
     local l, c = unpack(vim.api.nvim_win_get_cursor(0))
-    vim.cmd("norm k")
-    vim.cmd("norm o")
+    vim.cmd("norm O")
     vim.cmd("norm j")
     vim.api.nvim_win_set_cursor(0, { l + 1, c })
     local view = vim.fn.winsaveview()
