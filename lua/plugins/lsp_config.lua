@@ -59,6 +59,9 @@ return {
                     }
                 },
 
+                -- TypeScript
+                vtsls = {},
+
             }
         },
         config = function(_, opts)
