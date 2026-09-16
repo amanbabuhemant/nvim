@@ -18,6 +18,8 @@ function M.log()
         ll = "print(\"" .. var .. ":\", " .. var .. ")"
     elseif filetype == "javascript" then
         ll = "console.log(\"" .. var .. ":\", " .. var .. ");"
+    elseif filetype == "typescript" then
+        ll = "console.log(\"" .. var .. ":\", " .. var .. ");"
     elseif filetype == "go" then
         ll = "println(\"" .. var .. ":\", " .. var .. ")"
     elseif filetype == "lua" then
